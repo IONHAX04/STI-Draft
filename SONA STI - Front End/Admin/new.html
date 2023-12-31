@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Webpage</title>
+    <!-- Add SweetAlert library link here -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+    <!-- Add your CSS styles or link a CSS file here -->
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+        .menu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu li {
+            margin-right: 20px;
+        }
+        .menu li a {
+            text-decoration: none;
+            color: white;
+        }
+        .content {
+            padding: 20px;
+        }
+        .event-list {
+            list-style: none;
+            padding: 0;
+        }
+        .event-list-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .event-list-item .event-name {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="NavImg1.png" alt="NavImg1">
+        <h1>Heading</h1>
+        <img src="NavImg2.png" alt="NavImg2">
+    </div>
+    
+    <div class="content">
+        <ul class="menu">
+            <li><a href="#">Home*</a></li>
+            <li>
+                <a href="#">Event</a>
+                <button onclick="addEvent()" class="add-event-button">+ (Icon)</button>
+            </li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+        
+        <!-- Sample event list -->
+        <ul class="event-list">
+            <li class="event-list-item">
+                <div class="event-name">Event 1</div>
+                <button class="edit-button">Edit</button>
+                <button class="delete-button">Delete</button>
+            </li>
+            <li class="event-list-item">
+                <div class="event-name">Event 2</div>
+                <button class="edit-button">Edit</button>
+                <button class="delete-button">Delete</button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- SweetAlert library script -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script>
+        // Function to display a SweetAlert modal for adding a new event
+        function addEvent() {
+            Swal.fire({
+                title: 'Add New Event',
+                html:
+                    '<label for="eventName">Event Name:</label>' +
+                    '<input type="text" id="eventName" class="swal2-input">',
+                showCancelButton: true,
+                confirmButtonText: 'Add',
+                cancelButtonText: 'Cancel',
+                preConfirm: () => {
+                    const eventName = Swal.getPopup().querySelector('#eventName').value;
+                    if (!eventName) {
+                        Swal.showValidationMessage('Event Name is required');
+                    }
+                      return { eventName: eventName };
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Add the new event to the list (you can customize this part)
+                    const eventList = document.querySelector('.event-list');
+                    const eventListItem = document.createElement('li');
+                    eventListItem.className = 'event-list-item';
+                    eventListItem.innerHTML = `
+                        <div class="event-name">${result.value.eventName}</div>
+                        <button class="edit-button">Edit</button>
+                        <button class="delete-button">Delete</button>`;
+                    eventList.appendChild(eventListItem);
+
+                    Swal.fire('Event Added!', '', 'success');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

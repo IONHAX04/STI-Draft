@@ -1,0 +1,101 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto Slab', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+nav{
+	width: 100%;
+	position: sticky !important;
+	left: 0;
+	top: 0;
+	box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.5);
+	z-index: 10;
+    height: 60px;
+}
+
+
+.navbar-brand{
+	font-weight: 600;
+}
+
+
+.nav-link{
+	color: white !important;
+	border-bottom: 1px solid white transparent;
+}
+
+
+.nav-link:hover{
+	border-bottom: 1px solid white;
+}
+
+.navbar-search{
+	justify-content: center;
+	align-items: center;
+}
+
+.logo{
+	padding-left: 5px;
+	padding-right: 5px;
+	height: 50px;
+	width: 150px;
+	align-items: center;
+}
+
+nav #navbar-one{
+	color: black;
+	justify-content: space-between;
+}
+nav #navbar-one h3{
+	font-size: 25px;
+}
+
+@media (max-width: 800px){
+	#navbar-one h3{
+		display: none;
+	}
+	#navbar-one img{
+		width: 130px;
+		height: 50px;
+	}
+
+}
+@media (max-width: 400px){
+	#navbar-one h3{
+		display: none;
+	}
+	#navbar-one img{
+		width: 130px;
+		height: 50px;
+	}
+}
+
+/* ================================== */
+.card{
+    margin: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.title{
+    margin: 20px;
+}
+
+.newEvents input{
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.about textarea, h4{
+    margin: 30px;
+    text-align: justify;
+}
+.about h4{
+    margin: 20px; 
+}
+/* =========================== */

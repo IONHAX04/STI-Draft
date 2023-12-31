@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <link rel="icon" class="icons" href="./assets/sona.png">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+
+    <!-- BOOTSTRAP CDN LINK -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR 1 -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-light">
+        <div class="container-fluid" id="navbar-one">
+            <img class="logo" src="./assets/icon.png" alt="">
+            <h3>Science Technology and Innovation Hub for livelihood enhancement of SC community</h3><img class="logo"
+                src="./assets/sona.png" alt="">
+        </div>
+    </nav>
+
+    <!-- NAVBAR 2 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <h4 style="color: white;">Science Technology & Innovation - Admin</h4>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About STI Hub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#intervention">Intervention</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Events
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Upcoming Events</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Archieves</a></li>
+                            <li><a class="dropdown-item" href="#">Yearly Plans</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HOME GALLERY -->
+    <section class="homePage">
+        <center>
+            <h2 class="title">Home Gallery</h2>
+        </center>
+        <div class="row" style="justify-content: space-evenly;">
+            <div class="card" style="width: 18rem;">
+                <img src="./assets/pic2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <a href="#" class="btn btn-primary">Delete</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="./assets/pic2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <a href="#" class="btn btn-primary">Delete</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="./assets/pic2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <a href="#" class="btn btn-primary">Delete</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="./assets/pic2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <input type="text" placeholder="Enter reference name"/>
+                    <center><input type="file" placeholder="Choose the file" style="text-align: center; margin: 2px;"></center>
+                </div>
+            </div>
+        </div>
+    
+    
+        <center>
+            <h2 class="title">Whats New Event</h2>
+        </center>
+        <div class="newEvents row" style="justify-content: space-evenly;">
+            <input placeholder="Enter the upcoming events here" class="col-lg-6" type="text"/>
+            <button class="col-lg-2 btn btn-primary">Update Event</button>
+        </div>
+        <center><h3 class="title">Previous Event List</h3></center>
+        <div class="pastEvents row" style="justify-content: space-around; margin: 10px;">
+            <h4 class="col-lg-1">01</h4>
+            <h4 class="col-lg-6">Past event 1</h4><button class="btn btn-primary col-lg-2">Delete Event</button>
+        </div>
+        <div class="pastEvents row" style="justify-content: space-around; margin: 10px;">
+            <h4 class="col-lg-1">02</h4>
+            <h4 class="col-lg-6">Past event 2</h4><button class="btn btn-primary col-lg-2">Delete Event</button>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- BOOTSTRAP JS -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
